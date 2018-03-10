@@ -1,0 +1,28 @@
+<html>
+
+<body ng-app="sharing">
+    <div ng-controller="ChildCtrl">
+        <h2>First controller</h2>
+        <button ng-click="increment()">+</button>
+        <div ng-bind="name"></div>
+    </div>
+    <div ng-controller="ChildCtrl1">
+        <h2>Second controller</h2>
+        <div ng-bind="name"></div>
+        <button ng-click="HttpCall()"></button>
+        <div ng-bind="Req"></div>
+        <table ng-if="userData">
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        <tr ng-repeat="user in userData">
+            <td>{{ user.Name }}</td> <td>{{user.City}}</td>
+        </tr>
+    </div>
+</body>
+<script src="./node_modules/angular/angular.min.js"></script>
+<script src="./app.js"></script>
+<script src="./root/script.js"></script>
+
+</html>
